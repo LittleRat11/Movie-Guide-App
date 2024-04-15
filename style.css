@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#212529 50%, #c9184a 50%);
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    font-size: 16px;
+    padding: 3em 1.8em;
+    background-color: rgba(250, 250, 250, 0.5);
+    text-align: center;
+    border-radius: 10px;
+}
+
+.container h2 {
+    font-size: 30px;
+    margin-bottom: 1em;
+    font-weight: bold;
+}
+
+.container .search-container {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container input {
+    width: 100%;
+    max-width: 300px;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.container .search-btn {
+    padding: .5em 1.5em;
+    margin-left: 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: #c9184a;
+    cursor: pointer;
+    transition: background-color .4s ease-in-out;
+}
+
+.container .search-btn:hover {
+    background-color: #212529;
+}
+
+#result {
+    color: white;
+    margin-top: 10px;
+}
+
+#result .info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+#result .info img {
+    width: 100%;
+}
+
+#result .info h2 {
+    text-align: center;
+    font-size: 20px;
+}
+
+#result .imdb,
+#result .tomato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+#result .rating {
+    display: flex;
+    gap: 1.8rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#result .rating h4 {
+    font-size: 18px;
+}
+
+#result .imdb img {
+    width: 30px;
+    height: 30px;
+}
+
+#result .tomato img {
+    width: 30px;
+    height: 30px;
+}
+
+#result .movie-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#result .movie-info h4 {
+    font-size: 15px;
+}
+
+#result h3 {
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+#result p {
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.genre {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.genre div {
+    border: 1px solid #a0a0a0;
+    font-size: 15px;
+    padding: 10px;
+    background-color: white;
+    color: #212529;
+}
+
+.release-date {
+    text-align: left;
+}
+
+#result .msg {
+    text-align: center;
+}
+
+@media screen and (max-width:500px) {
+    .search-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .genre div {
+        margin-left: 5px;
+    }
+    .poster {
+        margin: auto;
+        width: auto;
+        height: auto;
+    }
+}
