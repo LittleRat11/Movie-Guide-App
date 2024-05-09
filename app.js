@@ -22,11 +22,11 @@ let getMovie = async() => {
                                 <div class="rating">
                                     <div class="imdb">
                                         <img src="star.svg">
-                                        <h4>${data.imdbRating}</h4>
+                                        <h4>${data.imdbRating === "N/A" ? "Checking" : data.imdbRating}</h4>
                                     </div>
                                     <div class="tomato">
                                         <img src="tomato.png">
-                                        <h4>${data.Ratings[1].Value}</h4>
+                                        <h4>${data.Ratings.length === 0 ? 'Checking' : data.Ratings[1].Value}</h4>
                                     </div>
                                 </div>
                                 <div class="movie-info">
